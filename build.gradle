@@ -1,0 +1,24 @@
+group 'ssuio'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = 'com.ssuio.Main'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+
+}
+
+jar {
+    baseName = 'ssuio-gradle'
+    version =  '0.1.0'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'com.alibaba:fastjson:1.2.34'
+    compile 'org.springframework.shell:spring-shell:1.2.0.RELEASE'
+}
